@@ -45,7 +45,7 @@ function Buttons() {
      <div onKeyDown={handleKey} className="hero min-h-screen bg-base-200">
         <div className="hero-content text-center">
           <div className="max-w-md">
-            <a href="https://instagram.com/mohd_irfan070/">Mohammed Irfan</a>
+            <a className='underline text-xl font-bold' href="https://instagram.com/mohd_irfan070/">Mohammed Irfan</a>
             <h1 className="text-5xl font-bold">Calculator</h1>
 
             <input type="text" value={input} onChange={handleChange} className="textarea h-20 w-72 text-xl textarea-bordered border-4 active:outline-none active:border-none border-base-content mt-4"  />
