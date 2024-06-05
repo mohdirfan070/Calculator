@@ -26,14 +26,31 @@ function Buttons() {
     }
   };
 
+  let handleKey = (e)=>{
+    console.log(e.key);
+    if(e.key==="Enter"){
+      calculate();
+    }
+    if(e.key==="Delete"){
+    setInput("");
+    }
+  }
+
+  // window.addEventListener(onkeydown,(event)=>{
+  //   console.log(event.key);
+  //   // if(event.key=="Enter"){
+  //   //   calculate();
+  //   //   console.log("Working");
+  //   // }
+  // });
+
   return (
    <>
      
 
-     <div className="hero min-h-screen bg-base-200">
+     <div onKeyDown={handleKey} className="hero min-h-screen bg-base-200">
         <div className="hero-content text-center">
           <div className="max-w-md">
-          <a className='text-xl font-bold underline' href="https://instagram.com/mohd_irfan070/">Mohammed Irfan</a>
             <h1 className="text-5xl font-bold">Calculator</h1>
 
             <input type="text" value={input} onChange={handleChange} className="textarea h-20 w-72 text-xl textarea-bordered border-4 active:outline-none active:border-none border-base-content mt-4"  />
@@ -111,11 +128,8 @@ function Buttons() {
              
             </div>
             </div>
-         
         </div>
-        
       </div>
-      
    </>
   )
 }
